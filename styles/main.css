@@ -6,6 +6,10 @@
     background-color: #191919;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 li,
 a,
 button {
