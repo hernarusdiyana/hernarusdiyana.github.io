@@ -1,137 +1,381 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #191919;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-li,
-a,
-button {
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #ECDBBA;
-    text-decoration: none;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-}
-
-.logo {
-    cursor: pointer;
-}
-
-.nav-link {
-    list-style-type: none;
-}
-
-.nav-link li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav-link li a {
-    transition: all 0.3 ease 0s;
-}
-
-.nav-link li a:hover {
-    color: #C84B31;
-}
-
-button {
-    padding: 6px 18px;
-    border: 2px solid rgba(200, 75, 49, 1);
-    box-sizing: border-box;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3 ease 0s;
-}
-
-button:hover {
-    background-color: rgba(200, 75, 49, 1);
-}
-
-
-/* Toggler */
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    height: 20px;
-    justify-content: space-between;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: #ECDBBA;
-    border-radius: 4px;
-    position: relative;
-    transition: all 0.8s;
-}
-
-.menu-toggle input {
-    position: absolute;
-    width: 40px;
-    height: 25px;
-    left: 442px;
-    top: 28px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 2;
-}
-
-
-/* Hamburger Menu Animation */
-
-.menu-toggle span:nth-child(2) {
-    transform-origin: 0 0;
-}
-
-.menu-toggle span:nth-child(4) {
-    transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked~span:nth-child(2) {
-    transform: rotate(45deg) translate(-1px, -1px);
-}
-
-.menu-toggle input:checked~span:nth-child(4) {
-    transform: rotate(-45deg) translate(-1px, 0);
-}
-
-.menu-toggle input:checked~span:nth-child(3) {
-    transform: scale(0);
-}
-
-
-/* Responsive Breakpoint */
-
-
-/* Ukuran tablet */
-
-@media screen and (max-width: 768px) {
-    header {
-        padding: ;
-    }
-}
-
-@media screen and (max-width:576px) {
-    .menu-toggle {
-        display: flex;
-    }
-    #x {
-        display: none;
-    }
-}
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:wght@500&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* background-color: #191919; */
+        }
+        
+        body {
+            background-color: #191919;
+            overflow-x: hidden;
+        }
+        
+        .btn-scnd button,
+        a {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #ECDBBA;
+            text-decoration: none;
+        }
+        
+        nav {
+            grid-area: nav;
+            display: flex;
+            justify-content: space-around;
+            /* grid-template-columns: repeat(minmax (100px)); */
+            padding: 30px;
+            margin-bottom: -50px;
+        }
+        
+        .brand {
+            color: #C84B31;
+            font-family: 'Consert One', cursive;
+            cursor: pointer;
+        }
+        
+        #btn-nav {
+            display: grid;
+            justify-content: right;
+            height: 30px;
+        }
+        
+        .nav-link {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+        }
+        
+        .nav-link li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+        
+        .nav-link li a {
+            transition: all 0.3 ease 0s;
+        }
+        
+        .nav-link li a:hover {
+            color: #C84B31;
+        }
+        
+        .btn-scnd button {
+            padding: 6px 18px;
+            border: 2px solid rgba(200, 75, 49, 1);
+            box-sizing: border-box;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3 ease 0s;
+            background-color: #191919;
+        }
+        
+        .btn-scnd button:hover {
+            background-color: rgba(200, 75, 49, 1);
+        }
+        /* Toggler */
+        
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 20px;
+            align-items: flex-end;
+            position: relative;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: #ECDBBA;
+            border-radius: 4px;
+            transition: all 0.8s;
+        }
+        
+        .menu-toggle input {
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 25px;
+            left: 0;
+            top: -2px;
+            opacity: 0;
+            cursor: pointer;
+            z-index: 2;
+        }
+        /* Hamburger Menu Animation */
+        
+        .menu-toggle span:nth-child(2) {
+            transform-origin: 0 0;
+        }
+        
+        .menu-toggle span:nth-child(3) {
+            width: 22px;
+        }
+        
+        .menu-toggle span:nth-child(4) {
+            transform-origin: 0 100%;
+        }
+        
+        .menu-toggle input:checked~span:nth-child(2) {
+            transform: rotate(45deg) translate(-1px, -1px);
+        }
+        
+        .menu-toggle input:checked~span:nth-child(4) {
+            transform: rotate(-45deg) translate(-1px, 0);
+        }
+        
+        .menu-toggle input:checked~span:nth-child(3) {
+            transform: scale(0);
+        }
+        /* Container */
+        
+        .container-2 {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 0.7fr 1fr 0.7fr;
+            grid-template-rows: 0.1fr 1fr;
+        }
+        /* .container-2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .container-2>* {
+            flex: 1 1 40%;
+        } */
+        /* header */
+        /* .header {
+            display: grid;
+            grid-template-areas: 'nav nav' 'hero hero-title';
+        } */
+        /* .hero {
+            flex: 1;
+            order: 2;
+            grid-area: hero;
+        } */
+        /*         
+        .hero img {
+            flex: 1;
+            display: grid;
+            width: 650px;
+        } */
+        
+        .hero img {
+            width: 547px;
+        }
+        
+        .hero-title {
+            align-self: center;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        .hero-title h2 {
+            font-size: 48px;
+            color: #ECDBBA;
+        }
+        
+        .hero-title h1 {
+            font-weight: 600px;
+            font-size: 72px;
+            color: #C84B31;
+        }
+        
+        .hero-title p {
+            /* width: 547px; */
+            color: #ECDBBA;
+            font-size: 18px;
+        }
+        
+        .btn-main {
+            background-color: #C84B31;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #ECDBBA;
+            padding: 8px 24px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3 ease 0s;
+        }
+        
+        .btn-main:hover {
+            background-color: #c03f25;
+        }
+        
+        .btn-header .btn-scnd {
+            margin-left: 5px;
+        }
+        /* ABOUT ME */
+        
+        .about-me {
+            margin-top: 100px;
+            text-align: justify;
+        }
+        
+        .about-me h1 {
+            color: #ECDBBA;
+            font-family: 'Poppins', sans-serif;
+            font-size: 48px;
+        }
+        
+        .about-me p {
+            color: #ECDBBA;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .img-about {
+            width: 447px;
+        }
+        
+        .data h2 {
+            color: #C84B31;
+            font-size: 48px;
+        }
+        
+        .data h5 {
+            color: #ECDBBA;
+            font-size: 16px;
+        }
+        
+        .about-me button {
+            margin-top: 14px;
+        }
+        /* MY SERVICES */
+        
+        .my-services {
+            margin-top: 100px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .tag-title h1 {
+            color: #ECDBBA;
+        }
+        
+        .my-services hr {
+            color: #C84B31;
+            height: 3px;
+            width: 125px;
+        }
+        
+        .card {
+            margin-top: 25px;
+            border-radius: 20px;
+            border: none;
+            min-height: 370px;
+        }
+        
+        .card-body {
+            padding: 50px;
+            background-color: #201e1e;
+            border-radius: 12px;
+        }
+        
+        .icon-services {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background: transparent;
+        }
+        
+        .card h1 {
+            color: #C84B31;
+            font-family: 'Poppins', sans-serif;
+            background-color: transparent;
+            position: relative;
+            top: 100px;
+        }
+        
+        .card hr {
+            position: relative;
+            top: 100px;
+        }
+        
+        .card h5 {
+            background: transparent;
+            color: #ECDBBA;
+            font-weight: 700;
+            position: relative;
+            top: 120px;
+            cursor: pointer;
+        }
+        
+        .card-body:hover {
+            padding: 50px;
+            background-color: #302a2a;
+            border-radius: 12px;
+            box-shadow: 10px 10px 20px rgb(0, 0, 0);
+        }
+        /* MY WORKS */
+        
+        .my-works {
+            margin-top: 100px;
+            background-color: #101010;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .tag-title {
+            padding-top: 50px;
+        }
+        
+        .my-works hr {
+            color: #C84B31;
+            height: 3px;
+            width: 125px;
+        }
+        
+        .card-img-top {}
+        
+        .card h3 {
+            background: transparent;
+            color: #ECDBBA;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        /* Responsive Breakpoint */
+        /* Ukuran tablet */
+        
+        @media screen and (max-width: 800px) {
+            .menu-toggle {
+                display: flex;
+            }
+            .nav-link {
+                display: none;
+            }
+        }
+        
+        @media screen and (max-width:520px) {
+            .menu-toggle {
+                display: flex;
+            }
+            /* #x {
+                display: flex;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100vh;
+                justify-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
+                background-color: #C84B31;
+                width: 50%;
+                transform: translateX(100%);
+            } */
+            nav ul.slide {
+                transform: translateX(0);
+            }
+            .hero-title h2 {
+                font-size: 34px;
+            }
+            .hero-title h1 {
+                font-size: 64px;
+            }
+            .card {
+                margin-top: 20px;
+            }
+        }
