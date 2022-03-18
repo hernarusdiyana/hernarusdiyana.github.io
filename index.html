@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herna Rusdiyana</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/js/bootstrap.js">
     <link rel="stylesheet" href="styles/main.css">
+
 </head>
 
 <body>
@@ -47,7 +49,9 @@
                     <img class="" src="images/profile-picture.png" alt="Herna Rusdiyana">
                 </div>
                 <div class="col hero-title">
-                    <h2 id="title1">Hi, I am <strong>Herna</strong></h2>
+                    <div class="title-1">
+                        <h2 id="title1">Hi, I am <strong>Herna</strong></h2>
+                    </div>
                     <h1>UI/UX Designer</h1>
                     <p>UI/UX Designer who will make your website look more attractive and valuable with lots of experience.</p>
                     <div class="btn-header">
@@ -55,7 +59,7 @@
                             <button class="btn-main">HIRE ME</button>
                         </a>
                         <a href="#" class="btn-scnd">
-                            <button>VIEW WORK</button>
+                            <button>VIEW WORKS</button>
                         </a>
                     </div>
                 </div>
@@ -75,18 +79,26 @@
                     <div class="data">
                         <div class="row">
                             <div class="col">
-                                <h2 id="years">15+</h2>
+                                <h2 id="years">20+</h2>
                                 <h5>Years of Experience</h5>
                             </div>
                             <div class="col">
-                                <h2 id="projects">230+</h2>
+                                <h2 id="projects">170+</h2>
                                 <h5>Completed Projects</h5>
                             </div>
                         </div>
                     </div>
-                    <a href="#">
-                        <button class="btn-main" id="btn-harrow">SAY HI</button>
-                    </a>
+                    <!-- <a href="#"> -->
+                    <button class="btn-main" id="open">SAY HI</button>
+                    <!-- </a> -->
+                    <div class="modal-container" id="modal_container">
+                        <div class="modal">
+                            <h1>SAY HI TO HERNA</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo numquam libero error. Magni deleniti officia debitis sed culpa voluptate, eaque accusamus non explicabo et cupiditate natus laboriosam eligendi quam repellendus.
+                            </p>
+                            <button class="btn-main" id="close">Close Me</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="col">
                     <img class="img-about" src="images/es-kopi-susu-1.jpeg" alt="">
@@ -173,9 +185,10 @@
                 </div>
             </div>
         </div>
+
     </section>
 
-
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

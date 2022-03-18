@@ -9,7 +9,6 @@
         
         body {
             background-color: #191919;
-            overflow-x: hidden;
         }
         
         .btn-scnd button,
@@ -165,7 +164,7 @@
         } */
         
         .hero img {
-            width: 547px;
+            width: auto;
         }
         
         .hero-title {
@@ -206,15 +205,56 @@
         
         .btn-main:hover {
             background-color: #c03f25;
+            /* box-shadow: 4px 4px 4px rgb(0, 0, 0); */
         }
         
         .btn-header .btn-scnd {
             margin-left: 5px;
         }
         /* ABOUT ME */
+        /* .modal-container {
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3 ease;
+        }
+        
+        .modal-container.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .modal {
+            background-color: #fff;
+            width: 600px;
+            max-width: 100%;
+            padding: 30px 50px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.2);
+            text-align: center;
+
+        }
+        
+        .modal h1 {
+            margin: 0;
+            color: #C84B31;
+        }
+        
+        .modal p {
+            font-size: 14px;
+            opacity: 0.7;
+        } */
         
         .about-me {
-            margin-top: 100px;
+            margin-top: 150px;
             text-align: justify;
         }
         
@@ -337,6 +377,10 @@
             font-weight: 500;
             cursor: pointer;
         }
+        
+        .my-works .card-body {
+            height: 150px;
+        }
         /* Responsive Breakpoint */
         /* Ukuran tablet */
         
@@ -352,6 +396,9 @@
         @media screen and (max-width:520px) {
             .menu-toggle {
                 display: flex;
+            }
+            .hero img {
+                width: 457px;
             }
             /* #x {
                 display: flex;
@@ -376,6 +423,9 @@
                 font-size: 64px;
             }
             .card {
+                margin-top: 20px;
+            }
+            .img-about {
                 margin-top: 20px;
             }
         }
